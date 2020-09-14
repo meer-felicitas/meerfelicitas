@@ -1,25 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>meerfelicitas</title>
-  <!-- bootstrap css -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-<!--  loading static files -->
-  {% load static %}
-  <!-- my css -->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  <!-- google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet" />
-  <!-- link to font awesome -->
-  <script src="https://kit.fontawesome.com/84c7f42d8e.js"></script>
-</head>
-
-<body class="bg-white-30">
-  <!-- navbar -->
+{% block navbar %}
+<!-- navbar -->
   <nav id="mainNavbar" class="navbar navbar-light navbar-expand-md py-0 fixed-top p">
     <a href="#" class="navbar-brand">meerfelicitas</a>
     <button class="navbar-toggler btn btn-sm" data-toggle="collapse" data-target="#navLinks"
@@ -47,17 +29,19 @@
       </ul>
     </div>
   </nav>
+{% endblock %}
 
+{% block content %}
   <!-- display home -->
   <section class="meer container-fluid px-0" style="position: fixed; z-index: 0">
-    <div class="d-flex flex-column align-items-center justify-content-center m-0" style="height: calc(100vh - 1rem);">
+    <div class="d-flex flex-column align-items-center justify-content-center m-0" style="height: 100vh;">
       <h1 class="display-3 mb-3 text-black">Meer Felicitas</h1>
       <a href="" class="btn btn-outline-dark btn-lg">read the articles</a>
     </div>
   </section>
 
   <!-- behind display -->
-  <div class="d-flex flex-row" style="height: calc(100vh - 1rem)"></div>
+  <div class="d-flex flex-row" style="height: 100vh"></div>
 
   <!-- intro -->
   <section class="bg-white" style="z-index: 1; position: relative">
@@ -190,62 +174,4 @@
       </div>
     </div>
   </section>
-
-  <!-- newsletter -->
-  <section class="bg-light" style="z-index: 1; position: relative">
-    <div class="container">
-      <div class="row justify-content-around" style="padding: 60px 0 50px 0">
-        <div class="col-lg-5 align-self-center">
-          <h5 class="px-2">
-            newsletter
-          </h5>
-          <p class="px-2">
-            Join our newsletter list to receive weekly emails about the latest
-            posts or articles, news from the community, events and much more.
-          </p>
-        </div>
-        <div class="col-lg-5 align-self-center">
-          <form class="p">
-            <div class="my-2">
-              <input type="text" class="form-control" placeholder="Full Name" />
-            </div>
-            <div class="my-2">
-              <input type="text" class="form-control" placeholder="Email Id" />
-            </div>
-            <small id="emailHelp" class="form-text text-muted mx-1">We'll never share your email with anyone
-              else.</small>
-            <a href="" class="btn btn-sm btn-outline-info my-3">
-              subscribe
-            </a>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- footer icons -->
-  <section class="gray" style="z-index: 1; position: relative">
-    <div class="container">
-      <div class="row justify-content-center" style="padding: 40px 0">
-        <a href=""><i class="fab fa-instagram fa-lg mx-3" style="color: #2b2b2b"></i></a>
-        <a href=""><i class="fab fa-facebook-f fa-lg mx-3" style="color: #2b2b2b"></i></a>
-        <a href=""><i class="far fa-envelope fa-lg mx-3" style="color: #2b2b2b"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"></script>
-  <!-- my js -->
-  <script src="{% static 'js/main.js' %}"></script>
-</body>
-
-</html>
+{% endblock %}
