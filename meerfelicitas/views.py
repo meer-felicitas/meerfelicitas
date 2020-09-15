@@ -7,3 +7,9 @@ def index(request):
 
 def contactus(request):
     return render(request,'contact.html')
+
+def resources(request):
+    return render(request,'resources.html')
+
+def articles(request):
+    return render(request,'articles.html')
